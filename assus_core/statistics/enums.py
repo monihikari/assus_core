@@ -1,0 +1,57 @@
+from assus_core.contrib.enums import BaseEnum
+
+
+class TipoOcupacion(BaseEnum):
+    CEDULA_IDENTIDAD = 'CEDULA_IDENTIDAD'
+    PASAPORTE = 'PASAPORTE'
+    CEDULA_EXTRANJERO = 'CEDULA_EXTRANJERO'
+
+
+class SubSector(BaseEnum):
+    PUBLICO = 'PUBLICO'
+    SEGURIDAD_SOCIAL = 'SEGURIDAD_SOCIAL'
+    PRIVADO = 'PRIVADO'
+    OTRO = 'OTRO'
+
+
+class EstadoPaciente(BaseEnum):
+    LEVE = 'LEVE'
+    GRAVE = 'GRAVE'
+    FALLECIDO = 'FALLECIDO'
+
+
+class TipoDocIdentidad(BaseEnum):
+    CEDULA_IDENTIDAD = 'CEDULA_IDENTIDAD'
+    PASAPORTE = 'PASAPORTE'
+    CEDULA_EXTRANJERO = 'CEDULA_EXTRANJERO'
+
+
+class Genero(BaseEnum):
+    MASCULINO = 'M'
+    FEMENINO = 'F'
+
+
+class TipoMuestra(BaseEnum):
+    ASPIRADO = 'ASPIRADO'
+    ESPUTO = 'ESPUTO'
+    LAVADO_BRONCO_ALVEOLAR = 'LAVADO_BRONCO_ALVEOLAR'
+    HISOPADO_NASOFARINGEO = 'HISOPADO_NASOFARINGEO'
+    HISOPADO_COMBINADO = 'HISOPADO_COMBINADO'
+    OTRO = 'OTRO'
+
+
+class RazonRechazoLaboratorio(BaseEnum):
+    FALTA_DE_INSUMOS = 'FALTA_DE_INSUMOS'
+    FALLECIMIENTO = 'FALLECIMIENTO'
+    OTRO = 'OTRO'
+
+
+class MetodoDiagnostico(BaseEnum):
+    PCR_TIEMPO_REAL = 'PCR_TIEMPO_REAL'
+    PCR_GENEXPERT = 'PCR_GENEXPERT'
+    TEST_ANTIGENO = 'TEST_ANTIGENO'
+
+
+class ResultadoLaboratorio(BaseEnum):
+    POSITIVO = 'POSITIVO'
+    NEGATIVO = 'NEGATIVO'

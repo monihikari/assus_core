@@ -2,14 +2,8 @@
 
 from django.db import models
 
-from assus_core.contrib.enums import BaseEnum
 from assus_core.contrib.models import UUIDWithTimestampMixin
-
-
-class EstadoPaciente(BaseEnum):
-    LEVE = 'LEVE'
-    GRAVE = 'GRAVE'
-    FALLECIDO = 'FALLECIDO'
+from assus_core.statistics.enums import EstadoPaciente
 
 
 class RegistroClinicoORM(UUIDWithTimestampMixin):

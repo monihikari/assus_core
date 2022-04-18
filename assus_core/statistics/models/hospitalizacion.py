@@ -2,20 +2,18 @@
 
 from django.db import models
 
-from assus_core.contrib.enums import BaseEnum
 from assus_core.contrib.models import UUIDWithTimestampMixin
-
-
-class EstadoPaciente(BaseEnum):
-    LEVE = 'LEVE'
-    GRAVE = 'GRAVE'
-    FALLECIDO = 'FALLECIDO'
 
 
 class HospitalizacionORM(UUIDWithTimestampMixin):
     paciente = models.ForeignKey(
         'PacienteORM',
         verbose_name='Paciente',
+        on_delete=models.PROTECT,
+    )
+    estblecimiento = models.ForeignKey(
+        'EstablecimientoORM',
+        verbose_name='Estblecimiento de Salud',
         on_delete=models.PROTECT,
     )
     es_ambulatorio = models.BooleanField(
@@ -37,10 +35,6 @@ class HospitalizacionORM(UUIDWithTimestampMixin):
     fecha_internacion = models.DateField(
         verbose_name='Fecha Internacion',
         blank=True, null=True,
-    )
-    establecimiento_internacion = models.CharField(
-        verbose_name='Establecimiento Internacion',
-        default=255,
     )
     con_ventilacion_mecanica = models.BooleanField(
         verbose_name='Con Ventilación Mecanica',

@@ -3,14 +3,8 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
-from assus_core.contrib.enums import BaseEnum
 from assus_core.contrib.models import UUIDWithTimestampMixin
-
-
-class TipoOcupacion(BaseEnum):
-    CEDULA_IDENTIDAD = 'CEDULA_IDENTIDAD'
-    PASAPORTE = 'PASAPORTE'
-    CEDULA_EXTRANJERO = 'CEDULA_EXTRANJERO'
+from assus_core.statistics.enums import TipoOcupacion
 
 
 class AntecedenteORM(UUIDWithTimestampMixin):

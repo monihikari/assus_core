@@ -79,7 +79,7 @@ THIRD_PARTY_APPS = [
 
 LOCAL_APPS = [
     "assus_core.users",
-    # Your stuff: custom apps go here
+    "assus_core.statistics",
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
