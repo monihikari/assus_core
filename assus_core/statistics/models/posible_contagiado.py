@@ -30,6 +30,9 @@ class PosibleContagiadoORM(UUIDWithTimestampMixin):
         null=True,
     )
 
+    def __str__(self):
+        return f'{self.nombres} {self.apellidos}'
+
     class Meta:
         db_table = 'posibles_contagiados'
         verbose_name = 'Posible Contagiado'

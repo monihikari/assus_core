@@ -5,9 +5,9 @@ from assus_core.contrib.models import UUIDWithTimestampMixin
 
 
 class FichaEpidemiologicaORM(UUIDWithTimestampMixin):
-    estblecimiento = models.ForeignKey(
+    establecimiento = models.ForeignKey(
         'EstablecimientoORM',
-        verbose_name='Estblecimiento de Salud',
+        verbose_name='Establecimiento de Salud',
         on_delete=models.PROTECT,
     )
     paciente = models.ForeignKey(

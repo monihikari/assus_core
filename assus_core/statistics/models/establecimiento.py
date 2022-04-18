@@ -40,7 +40,7 @@ class EstablecimientoORM(UUIDWithTimestampMixin):
     )
 
     def __str__(self):
-        return f'{self.uuid}'
+        return f'{self.nombre}'
 
     class Meta:
         db_table = 'establecimientos'
